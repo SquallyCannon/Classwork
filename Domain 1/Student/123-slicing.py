@@ -1,0 +1,10 @@
+serial_number = "1234-5678-9abc-def0"
+print(serial_number[0:4])
+print(serial_number[5:9])
+print(serial_number[10:14])
+print(serial_number[15:19])
+sn_s1 = int(serial_number[0:4], 16)
+sn_s2 = int(serial_number[5:9], 16)
+sn_s3 = int(serial_number[10:14], 16)
+sn_s4 = int(serial_number[15:19], 16)
+print(sn_s1+sn_s2+sn_s3+sn_s4)
