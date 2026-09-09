@@ -1,0 +1,2 @@
+Testing file for player configuration
+Testing file for player score
