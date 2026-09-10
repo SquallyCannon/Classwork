@@ -1,0 +1,712 @@
+Help on module datetime:
+
+NAME
+    datetime - Specific date/time and related types.
+
+MODULE REFERENCE
+    https://docs.python.org/3.14/library/datetime#module-datetime
+
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    See https://data.iana.org/time-zones/tz-link.html for
+    time zone and DST data sources.
+
+CLASSES
+    builtins.object
+        date
+            datetime
+        time
+        timedelta
+        tzinfo
+            timezone
+
+    class date(builtins.object)
+     |  date(year, month, day) --> date object
+     |
+     |  Methods defined here:
+     |
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |
+     |  __format__(...)
+     |      Formats self with strftime.
+     |
+     |  __ge__(self, value, /)
+     |      Return self>=value.
+     |
+     |  __gt__(self, value, /)
+     |      Return self>value.
+     |
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |
+     |  __le__(self, value, /)
+     |      Return self<=value.
+     |
+     |  __lt__(self, value, /)
+     |      Return self<value.
+     |
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |
+     |  __reduce__(self, /)
+     |      __reduce__() -> (cls, state)
+     |
+     |  __replace__(self, /, **changes)
+     |      The same as replace().
+     |
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |
+     |  __str__(self, /)
+     |      Return str(self).
+     |
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |
+     |  ctime(self, /)
+     |      Return ctime() style string.
+     |
+     |  isocalendar(self, /)
+     |      Return a named tuple containing ISO year, week number, and weekday.
+     |
+     |  isoformat(self, /)
+     |      Return string in ISO 8601 format, YYYY-MM-DD.
+     |
+     |  isoweekday(self, /)
+     |      Return the day of the week represented by the date.
+     |      Monday == 1 ... Sunday == 7
+     |
+     |  replace(self, /, year=unchanged, month=unchanged, day=unchanged)
+     |      Return date with new specified fields.
+     |
+     |  strftime(...)
+     |      format -> strftime() style string.
+     |
+     |  timetuple(self, /)
+     |      Return time tuple, compatible with time.localtime().
+     |
+     |  toordinal(self, /)
+     |      Return proleptic Gregorian ordinal.  January 1 of year 1 is day 1.
+     |
+     |  weekday(self, /)
+     |      Return the day of the week represented by the date.
+     |      Monday == 0 ... Sunday == 6
+     |
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |
+     |  fromisocalendar(...)
+     |      int, int, int -> Construct a date from the ISO year, week number and weekday.
+     |
+     |      This is the inverse of the date.isocalendar() function
+     |
+     |  fromisoformat(object, /)
+     |      str -> Construct a date from a string in ISO 8601 format.
+     |
+     |  fromordinal(...)
+     |      int -> date corresponding to a proleptic Gregorian ordinal.
+     |
+     |  fromtimestamp(timestamp, /)
+     |      Create a date from a POSIX timestamp.
+     |
+     |      The timestamp is a number, e.g. created via time.time(), that is
+     |      interpreted as local time.
+     |
+     |  strptime(...)
+     |      string, format -> new date parsed from a string (like time.strptime()).
+     |
+     |  today()
+     |      Current date or datetime:  same as self.__class__.fromtimestamp(time.time()).
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs)
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  day
+     |
+     |  month
+     |
+     |  year
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  max = datetime.date(9999, 12, 31)
+     |
+     |  min = datetime.date(1, 1, 1)
+     |
+     |  resolution = datetime.timedelta(days=1)
+
+    class datetime(date)
+     |  datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])
+     |
+     |  The year, month and day arguments are required. tzinfo may be None, or an
+     |  instance of a tzinfo subclass. The remaining arguments may be ints.
+     |
+     |  Method resolution order:
+     |      datetime
+     |      date
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |
+     |  __ge__(self, value, /)
+     |      Return self>=value.
+     |
+     |  __gt__(self, value, /)
+     |      Return self>value.
+     |
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |
+     |  __le__(self, value, /)
+     |      Return self<=value.
+     |
+     |  __lt__(self, value, /)
+     |      Return self<value.
+     |
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |
+     |  __reduce__(self, /)
+     |      __reduce__() -> (cls, state)
+     |
+     |  __reduce_ex__(...)
+     |      __reduce_ex__(proto) -> (cls, state)
+     |
+     |  __replace__(self, /, **changes)
+     |      The same as replace().
+     |
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |
+     |  __str__(self, /)
+     |      Return str(self).
+     |
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |
+     |  astimezone(...)
+     |      tz -> convert to local time in new timezone tz
+     |
+     |  ctime(self, /)
+     |      Return ctime() style string.
+     |
+     |  date(self, /)
+     |      Return date object with same year, month and day.
+     |
+     |  dst(self, /)
+     |      Return self.tzinfo.dst(self).
+     |
+     |  isoformat(...)
+     |      [sep] -> string in ISO 8601 format, YYYY-MM-DDT[HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
+     |      sep is used to separate the year from the time, and defaults to 'T'.
+     |      The optional argument timespec specifies the number of additional terms
+     |      of the time to include. Valid options are 'auto', 'hours', 'minutes',
+     |      'seconds', 'milliseconds' and 'microseconds'.
+     |
+     |  replace(self, /, year=unchanged, month=unchanged, day=unchanged,
+     |          hour=unchanged, minute=unchanged, second=unchanged,
+     |          microsecond=unchanged, tzinfo=unchanged, *, fold=unchanged)
+     |      Return datetime with new specified fields.
+     |
+     |  time(self, /)
+     |      Return time object with same time but with tzinfo=None.
+     |
+     |  timestamp(self, /)
+     |      Return POSIX timestamp as float.
+     |
+     |  timetuple(self, /)
+     |      Return time tuple, compatible with time.localtime().
+     |
+     |  timetz(self, /)
+     |      Return time object with same time and tzinfo.
+     |
+     |  tzname(self, /)
+     |      Return self.tzinfo.tzname(self).
+     |
+     |  utcoffset(self, /)
+     |      Return self.tzinfo.utcoffset(self).
+     |
+     |  utctimetuple(self, /)
+     |      Return UTC time tuple, compatible with time.localtime().
+     |
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |
+     |  combine(...)
+     |      date, time -> datetime with same date and time fields
+     |
+     |  fromisoformat(object, /)
+     |      string -> datetime from a string in most ISO 8601 formats
+     |
+     |  fromtimestamp(...)
+     |      timestamp[, tz] -> tz's local time from POSIX timestamp.
+     |
+     |  now(tz=None)
+     |      Returns new datetime object representing current time local to tz.
+     |
+     |        tz
+     |          Timezone object.
+     |
+     |      If no tz is specified, uses local timezone.
+     |
+     |  strptime(...)
+     |      string, format -> new datetime parsed from a string (like time.strptime()).
+     |
+     |  utcfromtimestamp(...)
+     |      Construct a naive UTC datetime from a POSIX timestamp.
+     |
+     |  utcnow()
+     |      Return a new datetime representing UTC day and time.
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs)
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  fold
+     |
+     |  hour
+     |
+     |  microsecond
+     |
+     |  minute
+     |
+     |  second
+     |
+     |  tzinfo
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  max = datetime.datetime(9999, 12, 31, 23, 59, 59, 999999)
+     |
+     |  min = datetime.datetime(1, 1, 1, 0, 0)
+     |
+     |  resolution = datetime.timedelta(microseconds=1)
+     |
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from date:
+     |
+     |  __format__(...)
+     |      Formats self with strftime.
+     |
+     |  isocalendar(self, /)
+     |      Return a named tuple containing ISO year, week number, and weekday.
+     |
+     |  isoweekday(self, /)
+     |      Return the day of the week represented by the date.
+     |      Monday == 1 ... Sunday == 7
+     |
+     |  strftime(...)
+     |      format -> strftime() style string.
+     |
+     |  toordinal(self, /)
+     |      Return proleptic Gregorian ordinal.  January 1 of year 1 is day 1.
+     |
+     |  weekday(self, /)
+     |      Return the day of the week represented by the date.
+     |      Monday == 0 ... Sunday == 6
+     |
+     |  ----------------------------------------------------------------------
+     |  Class methods inherited from date:
+     |
+     |  fromisocalendar(...)
+     |      int, int, int -> Construct a date from the ISO year, week number and weekday.
+     |
+     |      This is the inverse of the date.isocalendar() function
+     |
+     |  fromordinal(...)
+     |      int -> date corresponding to a proleptic Gregorian ordinal.
+     |
+     |  today()
+     |      Current date or datetime:  same as self.__class__.fromtimestamp(time.time()).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from date:
+     |
+     |  day
+     |
+     |  month
+     |
+     |  year
+
+    class time(builtins.object)
+     |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --> a time object
+     |
+     |  All arguments are optional. tzinfo may be None, or an instance of
+     |  a tzinfo subclass. The remaining arguments may be ints.
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |
+     |  __format__(...)
+     |      Formats self with strftime.
+     |
+     |  __ge__(self, value, /)
+     |      Return self>=value.
+     |
+     |  __gt__(self, value, /)
+     |      Return self>value.
+     |
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |
+     |  __le__(self, value, /)
+     |      Return self<=value.
+     |
+     |  __lt__(self, value, /)
+     |      Return self<value.
+     |
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |
+     |  __reduce__(self, /)
+     |      __reduce__() -> (cls, state)
+     |
+     |  __reduce_ex__(...)
+     |      __reduce_ex__(proto) -> (cls, state)
+     |
+     |  __replace__(self, /, **changes)
+     |      The same as replace().
+     |
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |
+     |  __str__(self, /)
+     |      Return str(self).
+     |
+     |  dst(self, /)
+     |      Return self.tzinfo.dst(self).
+     |
+     |  isoformat(...)
+     |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
+     |
+     |      The optional argument timespec specifies the number of additional terms
+     |      of the time to include. Valid options are 'auto', 'hours', 'minutes',
+     |      'seconds', 'milliseconds' and 'microseconds'.
+     |
+     |  replace(self, /, hour=unchanged, minute=unchanged, second=unchanged,
+     |          microsecond=unchanged, tzinfo=unchanged, *, fold=unchanged)
+     |      Return time with new specified fields.
+     |
+     |  strftime(...)
+     |      format -> strftime() style string.
+     |
+     |  tzname(self, /)
+     |      Return self.tzinfo.tzname(self).
+     |
+     |  utcoffset(self, /)
+     |      Return self.tzinfo.utcoffset(self).
+     |
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |
+     |  fromisoformat(object, /)
+     |      string -> time from a string in ISO 8601 format
+     |
+     |  strptime(...)
+     |      string, format -> new time parsed from a string (like time.strptime()).
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs)
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  fold
+     |
+     |  hour
+     |
+     |  microsecond
+     |
+     |  minute
+     |
+     |  second
+     |
+     |  tzinfo
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  max = datetime.time(23, 59, 59, 999999)
+     |
+     |  min = datetime.time(0, 0)
+     |
+     |  resolution = datetime.timedelta(microseconds=1)
+
+    class timedelta(builtins.object)
+     |  Difference between two datetime values.
+     |
+     |  timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
+     |
+     |  All arguments are optional and default to 0.
+     |  Arguments may be integers or floats, and may be positive or negative.
+     |
+     |  Methods defined here:
+     |
+     |  __abs__(self, /)
+     |      abs(self)
+     |
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |
+     |  __bool__(self, /)
+     |      True if self else False
+     |
+     |  __divmod__(self, value, /)
+     |      Return divmod(self, value).
+     |
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |
+     |  __floordiv__(self, value, /)
+     |      Return self//value.
+     |
+     |  __ge__(self, value, /)
+     |      Return self>=value.
+     |
+     |  __gt__(self, value, /)
+     |      Return self>value.
+     |
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |
+     |  __le__(self, value, /)
+     |      Return self<=value.
+     |
+     |  __lt__(self, value, /)
+     |      Return self<value.
+     |
+     |  __mod__(self, value, /)
+     |      Return self%value.
+     |
+     |  __mul__(self, value, /)
+     |      Return self*value.
+     |
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |
+     |  __neg__(self, /)
+     |      -self
+     |
+     |  __pos__(self, /)
+     |      +self
+     |
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |
+     |  __rdivmod__(self, value, /)
+     |      Return divmod(value, self).
+     |
+     |  __reduce__(self, /)
+     |      __reduce__() -> (cls, state)
+     |
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |
+     |  __rfloordiv__(self, value, /)
+     |      Return value//self.
+     |
+     |  __rmod__(self, value, /)
+     |      Return value%self.
+     |
+     |  __rmul__(self, value, /)
+     |      Return value*self.
+     |
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |
+     |  __rtruediv__(self, value, /)
+     |      Return value/self.
+     |
+     |  __str__(self, /)
+     |      Return str(self).
+     |
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |
+     |  __truediv__(self, value, /)
+     |      Return self/value.
+     |
+     |  total_seconds(self, /)
+     |      Total seconds in the duration.
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs)
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  days
+     |      Number of days.
+     |
+     |  microseconds
+     |      Number of microseconds (>= 0 and less than 1 second).
+     |
+     |  seconds
+     |      Number of seconds (>= 0 and less than 1 day).
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  max = datetime.timedelta(days=999999999, seconds=86399, microseconds=9...
+     |
+     |  min = datetime.timedelta(days=-999999999)
+     |
+     |  resolution = datetime.timedelta(microseconds=1)
+
+    class timezone(tzinfo)
+     |  Fixed offset from UTC implementation of tzinfo.
+     |
+     |  Method resolution order:
+     |      timezone
+     |      tzinfo
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |
+     |  __ge__(self, value, /)
+     |      Return self>=value.
+     |
+     |  __getinitargs__(self, /)
+     |      pickle support
+     |
+     |  __gt__(self, value, /)
+     |      Return self>value.
+     |
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |
+     |  __le__(self, value, /)
+     |      Return self<=value.
+     |
+     |  __lt__(self, value, /)
+     |      Return self<value.
+     |
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |
+     |  __str__(self, /)
+     |      Return str(self).
+     |
+     |  dst(self, object, /)
+     |      Return None.
+     |
+     |  fromutc(self, object, /)
+     |      datetime in UTC -> datetime in local time.
+     |
+     |  tzname(self, object, /)
+     |      If name is specified when timezone is created, returns the name.  Otherwise returns offset as 'UTC(+|-)HH:MM'.
+     |
+     |  utcoffset(self, object, /)
+     |      Return fixed offset.
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs)
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  max = datetime.timezone(datetime.timedelta(seconds=86340))
+     |
+     |  min = datetime.timezone(datetime.timedelta(days=-1, seconds=60))
+     |
+     |  utc = datetime.timezone.utc
+     |
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from tzinfo:
+     |
+     |  __reduce__(self, /)
+     |      -> (cls, state)
+
+    class tzinfo(builtins.object)
+     |  Abstract base class for time zone info objects.
+     |
+     |  Methods defined here:
+     |
+     |  __reduce__(self, /)
+     |      -> (cls, state)
+     |
+     |  dst(self, object, /)
+     |      datetime -> DST offset as timedelta positive east of UTC.
+     |
+     |  fromutc(self, object, /)
+     |      datetime in UTC -> datetime in local time.
+     |
+     |  tzname(self, object, /)
+     |      datetime -> string name of time zone.
+     |
+     |  utcoffset(self, object, /)
+     |      datetime -> timedelta showing offset from UTC, negative values indicating West of UTC
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs)
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+DATA
+    MAXYEAR = 9999
+    MINYEAR = 1
+    UTC = datetime.timezone.utc
+    __all__ = ('date', 'datetime', 'time', 'timedelta', 'timezone', 'tzinf...
+
+FILE
+    c:\users\marney\appdata\local\python\pythoncore-3.14-64\lib\datetime.py
+
+
