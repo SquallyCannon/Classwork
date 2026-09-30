@@ -1,0 +1,31 @@
+Frozen Ham, 3 
+Frozen Turkey, 2 
+Canned Yams, 3 
+Canned Corn, 3 
+Canned Green beans, 3 
+Canned Carrots, 3 
+Canned Peas, 3 
+Canned Fruit, 3 
+Canned Pumpkin, 3 
+Canned Milk, 3 
+Instant Mashed Potatoes, 3 
+Potatoes, 3 
+Sugar, 3 
+Flour, 3 
+Cranberry Sauce, 3 
+Pie Crust, 3 
+Pie Filling, 3 
+Stuffing Mix, 3 
+Gravy Mix, 3 
+Bread mix, 3 
+Cookie Mix, 3 
+Cake Mix and Icing, 3 
+Cooking Oil, 3 
+Mac n Cheese, 3 
+
+Canned Meats, 1 
+Peanut Butter, 0 
+Boxed Meal Kits, 0 
+Canned Soup, 0 
+Quick Meals, 0 
+
