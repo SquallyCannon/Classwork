@@ -460,8 +460,7 @@ def ranking():
         targetline = inventory.readlines()
     for line in range(len(inventorybase)):
         vline = int(targetline[line].split(", ")[1])
-        nline = targetline[line].split(", ")[0]
-        rankn.append(nline)
+  
         rankv.append(vline)
     rankv.sort(reverse=True)
     for line in range(len(inventorybase)):
@@ -499,11 +498,11 @@ def ranking():
     print(f"5: {best5} with {rankv[4]}")  
     print("")
     print(f"The bottom 5 are:")
-    print(f"1: {worst1} with {rankv[-1]}")
-    print(f"2: {worst2} with {rankv[-2]}")
-    print(f"3: {worst3} with {rankv[-3]}")
-    print(f"4: {worst4} with {rankv[-4]}")
     print(f"5: {worst5} with {rankv[-5]}")
+    print(f"4: {worst4} with {rankv[-4]}")
+    print(f"3: {worst3} with {rankv[-3]}")
+    print(f"2: {worst2} with {rankv[-2]}")
+    print(f"1: {worst1} with {rankv[-1]}")
 #returns top 5 quantities and bottom 5 quantities
 
 def log():
