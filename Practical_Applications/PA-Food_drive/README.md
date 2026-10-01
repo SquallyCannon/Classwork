@@ -111,6 +111,18 @@ There is one required downloaded library.
 
 
 <!-- USAGE EXAMPLES -->
+## User side UI
+<p>questionary is a python library that allows for creating a list of option that can be navigated through using arrow keys.</p>
+<br />
+<p>On boot up there are a few home options available; "View Inventory", "Search", "Edit", "Baskets", "Top/Bottom 5", "Show Transaction Log", and "Close".</p>
+<p>View Inventory prints the inventory names, quantities, point values, and total point values for every item in the inventory.</p>
+<p>Search allows for looking at a specific item by navigating through menus. It will open a list of 4 options; "Basket", "Pantry-only", "Other", and "Back" which will show all the items in their individual list or "back" will move you back to the home options menu.</p>
+<p>Edit allows for changing the inventory.txt files in multiple ways: "Add quantity" and "Remove quantity" allows you to add and subtract a certain amount of an item to a specific item. "Add Basket" and "Remove Basket" adds or subtracts 1 quantity from every item in the standard basket. "Add New Custom Item" and "Remove Custom Item" allow for creating space for items not in the basket or pantry and deleting them later if needed. "Done" exits out of editing, putting you back on the home options menu. Every edit creates a log in transaction.txt</p>
+<p>Baskets shows how many baskets can be made with the current inventory and what items are limiting more.</p>
+<p>Top/Bottom 5 prints the items five items with the highest quantity and five items with the lowest quantity sorted by where they appear in the list.</p>
+<p>Show Transaction Log prints the transaction.txt file with spacing.</p>
+<p>Close closes the file.</p>
+
 ## Runtime
 
 <div align="center">
