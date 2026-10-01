@@ -118,7 +118,7 @@ There is one required downloaded library.
 </a>
 </div>
 Baskets are calculated by slitting every line in inventory.txt to get all quantities and seeing if it can make a basket. If it runs through and finds that all the quantities allow for a basket it will run again with required up by 1, otherwise it will figure out which items don't allow for making a basket and return them.
-
+<br />
 Top 5 and bottom 5 are computed using lists and sorts. Every item in the inventory will be split from it's quantity into vline (Value of line) before being put into rankv. rankv will then be sorted in reverse so the biggest quantities are first in the list. Then a for loop will run for every line in inventorybase, inside the for loop are 11 if/elif/else statements, if a value of split line [1] equals the value in the if statements rankv position it will set the as the best/worst variable that lines up with that rankv position. (0-4 is top 1-5 from top to bottom. -1, -5 is bottom 1-5 from lowest to top.). If two values of quantities are equal whichever one is first in the list will be the one that takes the slot.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
