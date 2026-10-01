@@ -136,13 +136,13 @@ Top 5 and bottom 5 are computed using lists and sorts. Every item in the invento
 
 
 
-<!-- LICENSE -->
+<!-- LICENSE -
 ## License
 
 Distributed under the project_license. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+->
 
 
 <!-- CONTACT -->
