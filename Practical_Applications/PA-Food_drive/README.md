@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SquallyCannon/Classwork">
-    <img src="images/logo.png" alt="Logo" width="300" height="300">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Food Drive</h3>
@@ -117,7 +117,7 @@ There is one required downloaded library.
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 <div align="center">
 <a href="https://github.com/SquallyCannon/Classwork/Practical_Applications/PA-Food_drive/">
-    <img src="Images/Foodui.png" alt="Ui" width="80" height="80">
+    <img src="Images/Foodui.png" alt="Ui" width="300" height="300">
 </a>
 </div>
 
