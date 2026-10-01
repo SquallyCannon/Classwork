@@ -1,27 +1,27 @@
-Frozen Ham, 3 
-Frozen Turkey, 2 
-Canned Yams, 3 
-Canned Corn, 3 
-Canned Green beans, 3 
-Canned Carrots, 3 
-Canned Peas, 3 
-Canned Fruit, 3 
-Canned Pumpkin, 3 
-Canned Milk, 3 
-Instant Mashed Potatoes, 3 
-Potatoes, 3 
-Sugar, 3 
-Flour, 3 
-Cranberry Sauce, 3 
-Pie Crust, 3 
-Pie Filling, 3 
-Stuffing Mix, 3 
-Gravy Mix, 3 
-Bread mix, 3 
-Cookie Mix, 3 
-Cake Mix and Icing, 3 
-Cooking Oil, 3 
-Mac n Cheese, 3 
+Frozen Ham, 10 
+Frozen Turkey, 9 
+Canned Yams, 10 
+Canned Corn, 10 
+Canned Green beans, 10 
+Canned Carrots, 10 
+Canned Peas, 10 
+Canned Fruit, 10 
+Canned Pumpkin, 10 
+Canned Milk, 10 
+Instant Mashed Potatoes, 10 
+Potatoes, 10 
+Sugar, 10 
+Flour, 10 
+Cranberry Sauce, 10 
+Pie Crust, 10 
+Pie Filling, 10 
+Stuffing Mix, 10 
+Gravy Mix, 10 
+Bread mix, 10 
+Cookie Mix, 10 
+Cake Mix and Icing, 10 
+Cooking Oil, 10 
+Mac n Cheese, 10 
 
 Canned Meats, 1 
 Peanut Butter, 0 
