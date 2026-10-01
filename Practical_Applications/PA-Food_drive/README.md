@@ -117,7 +117,7 @@ There is one required downloaded library.
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 <div align="center">
 <a href="https://github.com/SquallyCannon/Classwork/">
-    <img src="tree/main/Practical_Applications/PA-Food_drive/images/Foodui.png" alt="Ui">
+    <img src="Practical_Applications/PA-Food_drive/images/Foodui.png" alt="Ui">
 </a>
 </div>
 
