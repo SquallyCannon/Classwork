@@ -85,7 +85,8 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 ### Built With
 
-* [Python][Python-url]
+* [Python 3.14.7][Python-url]
+* [questionary][Questionary-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,3 +189,4 @@ Project Link: [https://github.com/SquallyCannon/Classwork](https://github.com/Sq
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 [Python-url]: https://www.python.org/
+[Questionary-url]: https://questionary.readthedocs.io/en/stable/#
