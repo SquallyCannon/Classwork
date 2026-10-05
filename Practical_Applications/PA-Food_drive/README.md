@@ -112,7 +112,8 @@ There is one required downloaded library.
 
 
 <!-- USAGE EXAMPLES -->
-## User-side-UI
+# User-side-UI
+## User side UI
 <p>questionary is a python library that allows for creating a list of option that can be navigated through using arrow keys.</p>
 <br />
 <p>On boot up there are a few home options available; "View Inventory", "Search", "Edit", "Baskets", "Top/Bottom 5", "Show Transaction Log", and "Close".</p>
