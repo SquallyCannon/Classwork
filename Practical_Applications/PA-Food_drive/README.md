@@ -82,7 +82,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 ### Built With
 
 * [Python 3.14.7][Python-url]
-* [questionary][Questionary-url]
+* [questionary 2.1.1][Questionary-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
