@@ -1,0 +1,152 @@
+import questionary
+import copy
+
+def fibonacci(terms):
+    fiblist = []
+    previous1 = 0
+    previous2 = 1
+    if terms <= 1:
+        fiblist = [0]
+    else:
+        fiblist.append(previous1)
+        fiblist.append(previous2)
+        for term in range(terms-1):
+            temp = previous1 + previous2
+            fiblist.append(temp)
+            previous1 = copy.copy(previous2)
+            previous2 = temp
+    result = ", ".join(map(str, fiblist))
+    return result
+
+def prime_check(prime):
+    primebools = True
+    if prime < 2:
+        primebools = False
+    if primebools == True:
+        for number in range(prime):
+            if number < 2:
+                continue
+            if prime % number == 0 and number != prime:
+                primebools = False
+    return primebools
+
+def prime_list(mini, maxi):
+    terms = maxi - mini
+    primelist = []
+    if terms < 1:
+        return print("This range is 0 or less")
+    else:
+        for term in range(mini, maxi+1):
+            primebol = prime_check(term)
+            if primebol == True: 
+                primelist.append(term)
+        result = ", ".join(map(str, primelist))
+        return result
+
+def multtable(base, leng):
+    for number in range(1, leng+1):
+        print(f"{base} x {number} = {base*number}")
+
+def factorial(base):
+    basic = copy.copy(base)
+    for number in range(1, abs(basic)):
+        base = base * number
+    return base
+
+def collatz(terms):
+    steps = 0
+    while terms > 1:
+        steps += 1
+        if terms % 2 == 0:
+            terms /= 2
+        elif terms % 2 == 1:
+            terms = (terms * 3) + 1
+    return steps
+
+operation = True
+while operation == True:
+    sequence = questionary.select(
+        "Please select a sequence:",
+        choices=["Fibonacci Numbers", "Check if Prime", "Prime numbers in range", "Multiplication Table", "Factoral", "Collatz Sequence","Exit"],
+    ).ask()
+
+    print(f"You selected: {sequence}")
+    if sequence == "Fibonacci Numbers":
+        looping = True
+        while looping == True:
+            try:
+                terms = int(input("How many terms?: "))
+            except:
+                print("Fibonacci's must be an integer")
+            else:
+                print(fibonacci(terms))
+                looping = False
+    
+    elif sequence == "Check if Prime":
+        looping = True
+        while looping == True:
+            try:
+                prime = int(input("What number do you want to check?: "))
+            except:
+                print("Primes's must be an number")
+            else:
+                primebool = bool(prime_check(prime))
+                print(primebool)
+                if primebool == True:
+                    print(f"{prime} is prime")
+                else:
+                    print(f"{prime} is not prime")
+                looping = False
+    
+    elif sequence == "Prime numbers in range":
+        looping = True
+        while looping == True:
+            try:
+                mini = int(input("What is the miniimum?: "))
+                maxi = int(input("What is the maxiimum?: "))
+            except:
+                print("Ranges must be an integer")
+            else:
+                print(prime_list(mini, maxi))
+                looping = False
+                
+    elif sequence == "Multiplication Table":
+        looping = True
+        while looping == True:
+            try:
+                base = float(input("What is the base?: "))
+                leng = int(input("What is the length?: "))
+                if base % 1 == 0:
+                    base = int(base)
+                if leng < 1:
+                    raise ValueError
+            except:
+                print("Lengths must be an positive integer and base must be a number")
+            else:
+                multtable(base, leng)
+                looping = False
+
+    elif sequence == "Factoral":
+        looping = True
+        while looping == True:
+            try:
+                base = int(input("What is the factorial?: "))
+            except:
+                print("Factorial must be an integer.")
+            else:
+                print(factorial(base))
+                looping = False
+    
+    elif sequence == "Collatz Sequence":
+        looping = True
+        while looping == True:
+            try:
+                terms = int(input("What's the starting number?: "))
+            except:
+                print("Collatz start must be an integer.")
+            else:
+                print(collatz(terms))
+                looping = False
+
+    else:
+        operation = False
