@@ -79,7 +79,9 @@ while operation == True:
             except:
                 print("Fibonacci's must be an integer")
             else:
-                print(fibonacci(terms))
+                validate = questionary.confirm(message=f"Use {terms} for fibonacci?: ").ask()
+                if validate == True:
+                    print(fibonacci(terms))
                 looping = False
     
     elif sequence == "Check if Prime":
@@ -90,12 +92,14 @@ while operation == True:
             except:
                 print("Primes's must be an number")
             else:
-                primebool = bool(prime_check(prime))
-                print(primebool)
-                if primebool == True:
-                    print(f"{prime} is prime")
-                else:
-                    print(f"{prime} is not prime")
+                validate = questionary.confirm(message=f"Use {prime} for prime check?: ").ask()
+                if validate == True:
+                    primebool = bool(prime_check(prime))
+                    print(primebool)
+                    if primebool == True:
+                        print(f"{prime} is prime")
+                    else:
+                        print(f"{prime} is not prime")
                 looping = False
     
     elif sequence == "Prime numbers in range":
@@ -107,7 +111,9 @@ while operation == True:
             except:
                 print("Ranges must be an integer")
             else:
-                print(prime_list(mini, maxi))
+                validate = questionary.confirm(message=f"Use {mini} - {maxi} for prime check range?: ").ask()
+                if validate == True:
+                    print(prime_list(mini, maxi))
                 looping = False
                 
     elif sequence == "Multiplication Table":
@@ -123,7 +129,9 @@ while operation == True:
             except:
                 print("Lengths must be an positive integer and base must be a number")
             else:
-                multtable(base, leng)
+                validate = questionary.confirm(message=f"Use {base} and {leng} for base and length?: ").ask()
+                if validate == True:
+                    multtable(base, leng)
                 looping = False
 
     elif sequence == "Factoral":
@@ -134,7 +142,9 @@ while operation == True:
             except:
                 print("Factorial must be an integer.")
             else:
-                print(factorial(base))
+                validate = questionary.confirm(message=f"Use {base} for factorial?: ").ask()
+                if validate == True:
+                    print(factorial(base))
                 looping = False
     
     elif sequence == "Collatz Sequence":
@@ -145,8 +155,10 @@ while operation == True:
             except:
                 print("Collatz start must be an integer.")
             else:
-                print(collatz(terms))
-                looping = False
+                validate = questionary.confirm(message=f"Use {terms} for Collatz Sequence?: ").ask()
+                if validate == True:
+                    print(collatz(terms))
+                    looping = False
 
     else:
         operation = False
