@@ -152,8 +152,10 @@ while operation == True:
         while looping == True:
             try:
                 terms = int(input("What's the starting number?: "))
+                if terms < 0:
+                    raise ValueError
             except:
-                print("Collatz start must be an integer.")
+                print("Collatz start must be an positive integer.")
             else:
                 validate = questionary.confirm(message=f"Use {terms} for Collatz Sequence?: ").ask()
                 if validate == True:
