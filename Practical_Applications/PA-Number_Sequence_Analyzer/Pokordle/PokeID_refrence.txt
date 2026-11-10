@@ -1,0 +1,63 @@
+[Egg Groups]
+01 = monster
+02 = water1
+03 = bug
+04 = flying
+05 = ground
+06 = fairy
+07 = plant
+08 = humanshape
+09 = water3
+10 = mineral
+11 = indeterminate
+12 = water2
+13 = ditto
+14 = dragon
+15 = no-eggs
+
+[Types]
+01 = normal
+02 = fighting
+03 = flying
+04 = poison
+05 = ground
+06 = rock
+07 = bug
+08 = ghost
+09 = steel
+10 = fire
+11 = water
+12 = grass
+13 = electric
+14 = psychic
+15 = ice
+16 = dragon
+17 = dark
+18 = fairy
+19 = stellar
+
+[Habitat]
+01 = cave
+02 = forest
+03 = grassland
+04 = mountain
+05 = rare
+06 = rough-terrain
+07 = sea
+08 = urban
+09 = waters-edge
+
+[Colors]
+01 = black
+02 = blue
+03 = brown
+04 = gray
+05 = green
+06 = pink
+07 = purple
+08 = red
+09 = white
+10 = yellow
+
+
+gen VIII yellow [fighting, electric] [humanshape, indeterminate] rough-terrain
